@@ -16,7 +16,7 @@ export const heroData = [
       alter_ego: 'Kal-El',
       first_appearance: 'Action Comics #1',
       characters: ['Kal-El'],
-      featured: true,
+      featured: false,
       image_url:'https://www.trendsinternational.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/5/15740---justice-league---superman.jpg',
     },
     {
@@ -45,7 +45,7 @@ export const heroData = [
         'Sinestro',
         'Simon Baz',
       ],
-      featured: true,
+      featured: false,
     image_url:'https://i.pinimg.com/originals/c4/cc/a9/c4cca9d4908c58c99db4a8953f04201d.jpg',
   },
     {
@@ -65,7 +65,7 @@ export const heroData = [
       alter_ego: 'Princess Diana',
       first_appearance: 'All Star Comics #8',
       characters: ['Princess Diana'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/474x/42/05/42/42054287a99431b9ae1ab6ef9fe4ff35.jpg',
     },
     {
@@ -85,7 +85,7 @@ export const heroData = [
       alter_ego: 'Dick Grayson',
       first_appearance: 'Detective Comics #38',
       characters: ['Dick Grayson'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/564x/29/c9/53/29c953d035ca8a78bf82fe331e11ba00.jpg',
     },
     {
@@ -105,7 +105,7 @@ export const heroData = [
       alter_ego: 'Dinah Drake',
       first_appearance: 'Flash Comics #86',
       characters: ['Dinah Drake', 'Dinah Lance'],
-      featured: true,
+      featured: false,
       image_url:'https://www.dccomics.com/sites/default/files/imce/2014/11-NOV/AR310A_BTS_1335ra.c_5463a5ff970e80.23545368.jpg'
     },
     {
@@ -125,7 +125,7 @@ export const heroData = [
       alter_ego: 'Steve Rogers',
       first_appearance: 'Captain America Comics #1',
       characters: ['Steve Rogers'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/474x/a2/1d/17/a21d1753b96af3597d102a9748ef89eb.jpg',
     },
     {
@@ -145,7 +145,7 @@ export const heroData = [
       alter_ego: 'Thor Odinson',
       first_appearance: 'Journey into Myster #83',
       characters: ['Thor Odinson'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/474x/7e/b9/64/7eb9649a7015eab34c233bae0ba3adba.jpg',
     },
     {
@@ -165,7 +165,7 @@ export const heroData = [
       alter_ego: 'James Howlett',
       first_appearance: 'The Incredible Hulk #180',
       characters: ['James Howlett'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/474x/24/51/9e/24519e67deb80c1b9d737375767d62c0.jpg',
     },
     {
@@ -185,7 +185,7 @@ export const heroData = [
       alter_ego: 'Clinton Francis Barton',
       first_appearance: 'Tales of Suspense #57',
       characters: ['Clinton Francis Barton'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/564x/e9/c8/ce/e9c8ce0f60038b8969d507ede3a0ff8f.jpg',
     },
     {
@@ -205,7 +205,7 @@ export const heroData = [
       alter_ego: 'Norrin Radd',
       first_appearance: 'The Fantastic Four #48',
       characters: ['Norrin Radd'],
-      featured: true,
+      featured: false,
       image_url:'https://i.pinimg.com/474x/c8/ff/ab/c8ffab5d52760f80ee36fe72432ca16d.jpg',
     },
 ]

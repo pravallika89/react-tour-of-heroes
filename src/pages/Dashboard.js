@@ -3,14 +3,31 @@ import { Link } from 'react-router-dom';
 import { heroData } from '../data/heroes';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import { GiBatMask } from 'react-icons/gi';
+import {HeroCardComponent} from '../components/HeroCardComponent.js';
+import '../App.css';
+
 const DashboardPage = () => {
   const [heroes, setHeroes] = useState([]);
-  // console.log(heroData);
+  const [alert,setAlert]=useState(false);
+  // console.log(heroData);s
   useEffect(() => {
     let featured = heroData.filter(hero => hero.featured);
     // console.log(featured);
     setHeroes(featured);
-  }, []);
+  }, [alert]);
+  const updateFeatured=(heroId)=>{
+    //first find the hero from heroData by hero Id
+    let foundHero=heroData.find(hero=>hero.id===+heroId);
+    //updated foundHero.featured to be opposite of its current value
+    foundHero.featured=!foundHero.featured;
+    
+    setAlert(true);
+    setTimeout(()=>{
+      setAlert(false);
+    },2000)
+    console.log(foundHero);
+
+  }
   return (
     <div id='dashboard-page'>
       <div className='row text-center mt-3'>
@@ -20,55 +37,22 @@ const DashboardPage = () => {
         </div>
       </div>
       <div className='row'>
-        {heroes.map((hero, index) => {
+      {heroes.map((hero, index) => {
           return (
             <div className='col-sm-12 col-md-3' key={hero.id}>
-              <div className='card mb-3'>
-                {/* header */}
-                <div className='card-header text-center'>{hero.publisher}</div>
-                {/* image */}
-                <img
-                  src={hero.image_url}
-                  alt={hero.superhero}
-                  className='card-img-top'
-                />
-                {/* body */}
-                <div className='card-body'>
-                  <h4 className='card-title'>
-                    {hero.superhero === 'Batman' ? <GiBatMask /> : ''}{' '}
-                    {hero.superhero}
-                  </h4>
-                  <h6 className='text-secondary'>"{hero.alter_ego}"</h6>
-                  <div className='my-2'>
-                    <strong>First Appearance: </strong>
-                    {hero.first_appearance}
-                  </div>
-                  <div className='my-2'>
-                    <strong>Characters: </strong>
-                    {hero.characters.map((character, i) => {
-                      return (
-                        <small key={i}>
-                          {character}
-                          {i === hero.characters.length - 1 ? '' : ', '}
-                        </small>
-                      );
-                    })}
-                  </div>
-                  <div className='my-2 d-flex justify-content-between'>
-                    <Link to={`/heroes/${hero.id}`} className='card-link'>
-                      View Details
-                    </Link>
-                    <a href='javascript:void(0)' className='card-link'>
-                      {hero.featured ? <FaStar /> : <FaRegStar />}
-                    </a>
-                  </div>
-                </div>
-                {/* links */}
-              </div>
+              <HeroCardComponent
+              hero={hero}
+              updateFeatured={updateFeatured}/>
             </div>
+            
           );
         })}
-      </div>
+    </div>
+      {/* <div > */}
+        {/* <HeroCardComponent 
+        heroes={heroes}
+        updateFeatured={updateFeatured}/> */}
+      {/* </div> */}
     </div>
   );
 };
