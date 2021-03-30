@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { heroData } from '../data/heroes';
-import { FaStar, FaRegStar } from 'react-icons/fa';
-import { GiBatMask } from 'react-icons/gi';
 import {HeroCardComponent} from '../components/HeroCardComponent.js';
 import '../App.css';
 
@@ -20,13 +17,16 @@ const DashboardPage = () => {
     let foundHero=heroData.find(hero=>hero.id===+heroId);
     //updated foundHero.featured to be opposite of its current value
     foundHero.featured=!foundHero.featured;
+    showAlert();
     
+    // console.log(foundHero);
+
+  }
+  const showAlert=()=>{
     setAlert(true);
     setTimeout(()=>{
       setAlert(false);
     },2000)
-    console.log(foundHero);
-
   }
   return (
     <div id='dashboard-page'>
